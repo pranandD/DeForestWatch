@@ -14,7 +14,6 @@
 - [How to Run](#how-to-run)
 - [Requirements](#requirements)
 - [Limitations](#limitations)
-- [Paper](#paper)
 - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
@@ -270,9 +269,6 @@ apt-get install -y libopenjp2-7
 - Seasonal differences between acquisition dates may influence land-cover predictions.
 
 ---
-## Paper
-
-An IEEE-format research paper describing the methodology, experiments, and validation is currently under preparation and will be added to this repository upon publication.
 
 ## Acknowledgements
 
