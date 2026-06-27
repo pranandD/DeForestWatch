@@ -171,7 +171,7 @@ DeforestWatch/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/prananddesai/DeforestWatch.git
+git clone https://github.com/pranandD/DeforestWatch.git
 cd DeforestWatch
 ```
 
