@@ -94,13 +94,15 @@ Overall:
 - **Classes:** 10 land-cover categories
 - **Split:** 80% Training, 10% Validation, 10% Test (Seed = 837)
 
-### Inference Dataset — Sentinel-2
+### Inference Dataset — Sentinel-2 TCI
 
-- **Source:** Copernicus Data Space Ecosystem
+- **Source:** https://www.kaggle.com/datasets/prananddesai/petn-deforestation-data
+- **Original Provider:** Copernicus Data Space Ecosystem (ESA Sentinel-2 Level-2A)
 - **Tile:** T15QYV
 - **Location:** Petén, Guatemala
 - **Product:** Sentinel-2 Level-2A True Colour Image (TCI)
 - **Dates:** 08 January 2018 and 23 April 2026
+- **Spatial Resolution:** 10 m/pixel
 - **Study Area:** Approximately 114 km²
 ---
 
@@ -181,19 +183,13 @@ cd DeforestWatch
 pip install -r requirements.txt
 ```
 
-### 3. Download EuroSAT Dataset
+### 3. Download the EuroSAT Dataset
 
-Download:
+Download the **EuroSAT RGB** dataset from Kaggle:
 
 https://www.kaggle.com/datasets/apollo2506/eurosat-dataset
 
-Place the dataset inside
-
-```
-/kaggle/input/datasets/prananddesai/eurosat/2750/
-```
-
-or modify the dataset path inside the notebook.
+Add the dataset to your Kaggle Notebook (or download it locally if running outside Kaggle) and update the `data_dir` variable in **DeforestWatch.ipynb** to match its location.
 
 ### 4. Train the Model
 
@@ -214,26 +210,21 @@ The notebook will
 /kaggle/working/eurosat_model.keras
 ```
 
-### 5. Download Sentinel-2 Images
+### Step 5 — Download the Sentinel-2 Dataset
 
-Download Sentinel-2 Level-2A TCI imagery for tile
+Download the prepared Sentinel-2 dataset from Kaggle:
 
-```
-T15QYV
-```
+https://www.kaggle.com/datasets/prananddesai/petn-deforestation-data
 
-Dates used:
+Add the dataset to your Kaggle Notebook.
 
-- 08 January 2018
-- 23 April 2026
-
-Place the JP2 files inside
+The notebook expects the dataset to be available at:
 
 ```
-/kaggle/input/datasets/prananddesai/petn-deforestation-data/Maya_Forest_Deforestation/
+/kaggle/input/petn-deforestation-data/
 ```
 
-or update the paths inside the notebook.
+If your dataset is mounted in a different location, simply update the `base_path` variable inside **DeforestWatch.ipynb**.
 
 ### 6. Run Change Detection
 
